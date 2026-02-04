@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    color-scheme: light dark;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: light-dark(#f5f5f5, #050a30);
+    color: light-dark(#000000, #ffffff);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* For Light/Dark Mode Button Menu */
+.mat-mdc-menu-panel.custom-theme-menu {
+    border: 1px solid light-dark(rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.2));
+    border-radius: 8px;
+}

@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="themeMenu" aria-label="Toggle theme">
+        <mat-icon>{{ themeService.selectedTheme()?.icon }}</mat-icon>
+    </button>
+
+    <mat-menu #themeMenu="matMenu" class="custom-theme-menu">
+        @for (theme of themeService.getThemes(); track theme.name) {
+        <button mat-menu-item [class.selected-theme]="themeService.selectedTheme()?.name === theme.name"
+            (click)="themeService.setTheme(theme.name)">
+            <mat-icon>{{ theme.icon }}</mat-icon>
+            <span>{{ theme.name | titlecase }}</span>
+        </button>
+        }
+    </mat-menu>
+</mat-toolbar>
