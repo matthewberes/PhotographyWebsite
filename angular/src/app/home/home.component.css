@@ -1,0 +1,29 @@
+.container {
+    position: relative;
+    background-color: light-dark(#f5f5f5, #0F0C1D);
+    width: 100%;
+}
+
+.bottom-image {
+    height: 85vh;
+    position: relative;
+    z-index: 1;
+    overflow-y: hidden;
+}
+
+.top-image {
+    height: 85vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+p {
+    position: absolute;
+    bottom: 25%;
+    right: 10%;
+    color: light-dark(#374151, #E1E8F0);
+    font-size: 3rem;
+    z-index: 3;
+}

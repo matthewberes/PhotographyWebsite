@@ -11,9 +11,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-color: light-dark(#f5f5f5, #050a30);
-    color: light-dark(#000000, #ffffff);
-    transition: background-color 0.3s, color 0.3s;
+    background-color: light-dark(#f5f5f5, #0F0C1D);
+    color: light-dark(#374151, #E1E8F0);
+    transition: background-color 0.2s, color 0.2s;
 }
 
 /* For Light/Dark Mode Button Menu */

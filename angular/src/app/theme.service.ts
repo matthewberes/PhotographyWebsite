@@ -1,4 +1,5 @@
 import { Injectable, computed, effect, inject, signal } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 export type ThemeMode = 'light' | 'dark' | 'system';
 
@@ -12,6 +13,7 @@ export interface AppTheme {
 })
 export class ThemeService {
   private appTheme = signal<ThemeMode>('system');
+  public currentTheme: BehaviorSubject<string> = new BehaviorSubject<string>('system');
 
   private themes: AppTheme[] = [
     { name: 'light', icon: 'light_mode' },
@@ -27,6 +29,10 @@ export class ThemeService {
     return this.themes;
   }
 
+  getTheme() {
+    return this.appTheme();
+  }
+
   setTheme(theme: 'light' | 'dark' | 'system') {
     this.appTheme.set(theme);
   }
@@ -36,6 +42,7 @@ export class ThemeService {
       const appTheme = this.appTheme();
       const colorScheme = appTheme === 'system' ? 'light dark' : appTheme;
       document.body.style.setProperty('color-scheme', colorScheme);
+      this.currentTheme.next(appTheme);
     });
   }
 }

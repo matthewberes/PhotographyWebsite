@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+h1 {
+    font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-weight: 300;
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+.desktop-navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.desktop-navbar a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.desktop-navbar a:hover {
+    background-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+.desktop-navbar a.active:after {
+    border-radius: 0px;
+    border-bottom: 2px solid;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: currentColor;
+}
+
+app-mode-menu {
+    margin-left: 10rem;
+}

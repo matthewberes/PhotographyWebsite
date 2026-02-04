@@ -1,0 +1,9 @@
+<div class="container">
+    <h1 (click)="onTitleClick()">RCDSB</h1>
+    <div class="desktop-navbar">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            (click)="menuOpen = false">Home</a>
+        <a routerLink="/gallery" routerLinkActive="active">Gallery</a>
+        <app-mode-menu></app-mode-menu>
+    </div>
+</div>
