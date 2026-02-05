@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../theme.service';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { Subscription } from 'rxjs';
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit {
-  constructor(private themeService: ThemeService) { }
+  constructor(private themeService: ThemeService, private router: Router) { }
 
   imageSource: string = 'light-banner.png';
 
@@ -32,6 +33,10 @@ export class HomeComponent implements OnInit {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       this.imageSource = prefersDark ? 'dark-banner.png' : 'light-banner.png';
     }
+  }
+
+  viewPortfolio() {
+    this.router.navigate(['/gallery']);
   }
 
   ngOnDestroy() {

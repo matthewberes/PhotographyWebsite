@@ -24,6 +24,11 @@ p {
     bottom: 25%;
     right: 10%;
     color: light-dark(#374151, #E1E8F0);
-    font-size: 3rem;
+    font-size: 36pt;
     z-index: 3;
+}
+
+p:hover {
+    cursor: pointer;
+    color: light-dark(#1F2937, #c6d3e2);
 }
