@@ -1,5 +1,14 @@
 <div class="container">
     <img src="test.jpg" class="bottom-image">
     <img [src]="imageSource" class="top-image">
-    <p (click)="viewPortfolio()">View my portfolio</p>
+    <p class="one-line" (click)="viewPortfolio()">View my portfolio</p>
+    <div class="two-line" (click)="viewPortfolio()">
+        <p>View my</p>
+        <p>portfolio</p>
+    </div>
+    <div class="three-line" (click)="viewPortfolio()">
+        <p>View</p>
+        <p>my</p>
+        <p>work</p>
+    </div>
 </div>

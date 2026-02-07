@@ -6,6 +6,8 @@
 
 .bottom-image {
     height: 85vh;
+    width: 100%;
+    object-fit: cover;
     position: relative;
     z-index: 1;
     overflow-y: hidden;
@@ -13,22 +15,82 @@
 
 .top-image {
     height: 85vh;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
 }
 
-p {
+.one-line {
     position: absolute;
     bottom: 25%;
-    right: 10%;
+    right: 3%;
     color: light-dark(#374151, #E1E8F0);
-    font-size: 36pt;
+    font-size: 3rem;
     z-index: 3;
 }
 
-p:hover {
+.one-line:hover,
+.two-line:hover,
+.three-line:hover {
     cursor: pointer;
     color: light-dark(#1F2937, #c6d3e2);
+}
+
+.two-line,
+.three-line {
+    display: none;
+    text-align: center;
+    position: absolute;
+    bottom: 25%;
+    right: 3%;
+    color: light-dark(#374151, #E1E8F0);
+    font-size: 3rem;
+    z-index: 3;
+}
+
+
+@media (max-width: 428px) {
+
+    .two-line {
+        display: none;
+    }
+
+    .three-line {
+        display: block;
+        font-size: 1.8rem;
+    }
+
+}
+
+@media (min-width: 429px) and (max-width: 1024px) {
+    .two-line {
+        display: block;
+    }
+}
+
+/* sm */
+@media (max-width: 768px) {
+    .two-line {
+        font-size: 1.8rem;
+    }
+}
+
+/* md */
+@media (max-width: 1024px) {
+
+    .one-line {
+        display: none;
+    }
+
+}
+
+/* for text */
+@media (max-width: 1450px) {
+
+    .one-line {
+        font-size: 2rem;
+    }
+
 }
