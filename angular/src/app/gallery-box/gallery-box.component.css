@@ -1,0 +1,21 @@
+.container {
+    width: 600px;
+    margin: 10px;
+}
+
+img {
+    width: 100%;
+    border: 1px solid light-dark(#333, #ccc);
+    transition: filter 0.2s ease-in-out;
+}
+
+img:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}

@@ -1,1 +1,6 @@
-<p>gallery works!</p>
+<div class="container">
+    @for(photo of photos; track photo.src) {
+    <app-gallery-box></app-gallery-box>
+    <!-- <app-gallery-box [src]="photo.src" [title]="photo.title" [camera]="photo.camera" [location]="photo.location" [description]="photo.description" [printLink]="photo.printLink" [fileLink]="photo.fileLink"></app-gallery-box> -->
+    }
+</div>
