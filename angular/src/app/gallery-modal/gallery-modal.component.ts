@@ -22,4 +22,14 @@ export class GalleryModalComponent {
   close() {
     this.dialogRef.close();
   }
+
+  getFile() {
+    // Implement get file logic here
+    console.log('Get file clicked for', this.obj.title);
+  }
+
+  orderPrint() {
+    // Implement order print logic here
+    console.log('Order print clicked for', this.obj.title);
+  }
 }

@@ -7,6 +7,7 @@
     align-items: center;
     background-color: light-dark(#ededed, #1A162E);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    font-size: 12pt;
 }
 
 img {
@@ -28,4 +29,70 @@ h2 {
     align-items: center;
     gap: 10px;
     margin: 0px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px 20px;
+}
+
+.purchase-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ccc;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: color 0.3s,
+        background-color 0.3s;
+}
+
+.close-icon:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: grey;
+}
+
+.close {
+    background-color: transparent;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 7px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 12pt;
+}
+
+.close:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+.get-file,
+.order-print {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    padding: 7px 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 12pt;
+}
+
+.get-file:hover,
+.order-print:hover {
+    background-color: #0056b3;
 }

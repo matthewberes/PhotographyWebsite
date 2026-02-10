@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModeMenuComponent } from '../mode-menu/mode-menu.component';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +9,12 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
+
+  constructor(private router: Router) { }
+
   menuOpen = false;
 
   onTitleClick() {
-    window.location.href = '/';
+    this.router.navigate(['/']);
   }
 }

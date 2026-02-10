@@ -9,11 +9,16 @@ h1 {
     font-size: clamp(2.25rem, 4.5vw, 3.25rem);
     padding: 1rem;
     margin: 1.5rem 0;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 h1:hover {
     cursor: pointer;
+}
+
+.subtitle {
+    font-weight: 100;
+    color: light-dark(#6B7280, #9CA3AF);
 }
 
 .desktop-navbar {

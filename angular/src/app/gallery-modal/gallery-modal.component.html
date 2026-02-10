@@ -1,7 +1,9 @@
 <div class="container">
+    <mat-icon class="close-icon" (click)="close()">close</mat-icon>
     <img [src]="obj.src" [alt]="obj.title" />
     <div class="content">
         <h2>{{obj.title}}</h2>
+        <hr>
         <ng-container *ngIf="hasLocation()">
             <div class="row">
                 <mat-icon>location_on</mat-icon>
@@ -15,5 +17,12 @@
             </div>
         </ng-container>
         <p>{{obj.description}}</p>
+    </div>
+    <div class="buttons">
+        <button class="close" (click)="close()">Close</button>
+        <div class="purchase-buttons">
+            <button class="get-file" (click)="getFile()">Get File</button>
+            <button class="order-print" (click)="orderPrint()">Order Print</button>
+        </div>
     </div>
 </div>
