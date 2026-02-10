@@ -21,10 +21,3 @@ app-gallery-box:hover {
         gap: 0;
     }
 }
-
-@media (max-width: 768px) {
-    app-gallery-box {
-        width: 50%;
-    }
-
-}

@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: light-dark(#ededed, #1A162E);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+.content {
+    width: 100%;
+    padding: 5px 20px;
+    text-align: start;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0px;
+}

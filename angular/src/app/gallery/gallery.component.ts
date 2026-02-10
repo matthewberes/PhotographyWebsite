@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GalleryBoxComponent } from '../gallery-box/gallery-box.component';
+import { GalleryItem } from '../models/gallery-item';
 
 @Component({
   selector: 'app-gallery',
@@ -9,7 +10,7 @@ import { GalleryBoxComponent } from '../gallery-box/gallery-box.component';
 })
 export class GalleryComponent {
 
-  photos = [
+  photos: GalleryItem[] = [
     {
       src: 'test.jpg',
       title: 'Test Photo',
@@ -22,7 +23,7 @@ export class GalleryComponent {
     {
       src: 'test.jpg',
       title: 'Test Photo',
-      camera: 'Test Camera',
+      camera: '',
       location: 'Test Location',
       description: 'This is a test photo.',
       printLink: 'https://example.com/print/test.jpg',
@@ -32,7 +33,7 @@ export class GalleryComponent {
       src: 'test.jpg',
       title: 'Test Photo',
       camera: 'Test Camera',
-      location: 'Test Location',
+      location: '',
       description: 'This is a test photo.',
       printLink: 'https://example.com/print/test.jpg',
       fileLink: 'https://example.com/file/test.jpg'
@@ -40,8 +41,8 @@ export class GalleryComponent {
     {
       src: 'test.jpg',
       title: 'Test Photo',
-      camera: 'Test Camera',
-      location: 'Test Location',
+      camera: '',
+      location: '',
       description: 'This is a test photo.',
       printLink: 'https://example.com/print/test.jpg',
       fileLink: 'https://example.com/file/test.jpg'

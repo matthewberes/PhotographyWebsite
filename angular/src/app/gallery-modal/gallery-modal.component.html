@@ -1,0 +1,19 @@
+<div class="container">
+    <img [src]="obj.src" [alt]="obj.title" />
+    <div class="content">
+        <h2>{{obj.title}}</h2>
+        <ng-container *ngIf="hasLocation()">
+            <div class="row">
+                <mat-icon>location_on</mat-icon>
+                <p>{{obj.location}}</p>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="hasCamera()">
+            <div class="row">
+                <mat-icon>camera_alt</mat-icon>
+                <p>{{obj.camera}}</p>
+            </div>
+        </ng-container>
+        <p>{{obj.description}}</p>
+    </div>
+</div>
