@@ -1,5 +1,9 @@
 <div class="container">
     @for(photo of photos; track photo) {
-    <app-gallery-box [obj]="photo"></app-gallery-box>
+        @defer (on viewport) {
+            <app-gallery-box [obj]="photo"></app-gallery-box>
+        } @placeholder {
+            <div class="placeholder"></div>
+        }
     }
 </div>

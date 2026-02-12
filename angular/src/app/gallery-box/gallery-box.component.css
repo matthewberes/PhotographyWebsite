@@ -14,7 +14,21 @@ img:hover {
     filter: brightness(80%);
 }
 
+/* Animation */
+.fade-in-slide {
+    transition: opacity 0.35s ease-out, transform 0.3s ease-out;
+    opacity: 1;
+    transform: translateY(0);
+}
 
+@starting-style {
+    .fade-in-slide {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Responsivity */
 @media (max-width: 768px) {
     .container {
         width: 100%;
